@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+
+:root {
+    /* MAIN COLORS */
+    --First-blue-color: #0B0D17;
+    --First-gray-text-color: #D0D6F9;
+    --White: #FFFFFF;
+
+    /* MAIN TYPOGRAPHY  */
+    --Font-Barlow: 'Barlow Condensed', sans-serif;
+    --Font-Bellefair: 'Bellefair', serif;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    background-image: url('../img/home/background-home-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.header-container {
+    /* background-color: #4862e680; */
+    height: 14vh;
+    margin: 40px 0 0 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.line-header-container div {
+    width: 30vw;
+    height: .25vh;
+    background-color: #97979754;
+    position: absolute;
+    right: calc(100% - 40%);
+}
+
+.nav-header-container {
+    width: 60vw;
+    height: inherit;
+    background-color: #97979736;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-header-container::before {
+    z-index: -1;
+    width: inherit;
+    height: inherit;
+    content: "";
+    position: absolute;
+    background: inherit;
+    backdrop-filter: blur(10px) saturate(100%) contrast(45%) brightness(130%);
+}
+
+.ul-header {
+    height: inherit;
+    /* background-color: #383f37; */
+    font-family: 'Barlow Condensed';
+    display: flex;
+    gap: 20px;
+    padding: 0 10px;
+}
+
+.ul-header li {
+    width: inherit;
+    height: inherit;
+    list-style: none;
+    text-align: center;
+    /* background-color: #0B0D17; */
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+}
+
+.ul-header li a {
+    /* background-color: #3452e6; */
+    width: inherit;
+    height: inherit;
+    text-decoration: none;
+    font-size: 1.6rem;
+    letter-spacing: 2.7px;
+    text-transform: uppercase;
+    color: var(--White);
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.ul-header li a::before {
+    opacity: 1;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 0px;
+    height: 2px;
+    background-color: #ffffff8e;
+    animation-direction: normal;
+    transition: all 0.2s ease;
+}
+
+.ul-header li:nth-child(1) a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    z-index: 2;
+}
+
+.ul-header li:nth-child(2) a:hover::before {
+    animation: header;
+    animation-delay: .1s;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+.ul-header li:nth-child(3) a:hover::before {
+    animation: header;
+    animation-delay: .1s;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+.ul-header li:nth-child(4) a:hover::before {
+    animation: header;
+    animation-delay: .1s;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes header {
+    0% {
+        width: 0%;
+    }
+
+
+    100% {
+        width: 100%;
+    }
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .nav-header-container::before {
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px) saturate(180%) contrast(100%) brightness(100%);
+    }
+}
+
+
+@media (max-width:1024px) {
+    body {
+        background-image: url('../img/home/background-home-tablet.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+}
+
+@media (max-width:640px) {
+    body {
+        background-image: url('../img/home/background-home-mobile.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+}
+
