@@ -21,15 +21,17 @@ body {
     background-image: url('../img/home/background-home-desktop.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 
 
-@media (max-width:980px) {
+@media (max-width:1024px) {
     body {
         background-image: url('../img/home/background-home-tablet.jpg');
         background-repeat: no-repeat;
         background-size: cover;
+        background-attachment: fixed;
     }
 }
 
@@ -38,6 +40,7 @@ body {
         background-image: url('../img/home/background-home-mobile.jpg');
         background-repeat: no-repeat;
         background-size: cover;
+        background-attachment: fixed;
     }
 }
 
